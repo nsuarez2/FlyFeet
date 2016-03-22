@@ -38,6 +38,7 @@
 
 #import <UIKit/UIKit.h>
 #import <libARDiscovery/ARDISCOVERY_BonjourDiscovery.h>
+#import "FFButton.h"
 
 @interface PilotingViewController : UIViewController
 
@@ -45,6 +46,14 @@
 @property (nonatomic, strong) ARService* service;
 
 @property (nonatomic, strong) IBOutlet UILabel *batteryLabel;
+
+@property (strong, nonatomic) IBOutlet FFButton *button0;
+@property (strong, nonatomic) IBOutlet FFButton *button1;
+@property (strong, nonatomic) IBOutlet FFButton *button2;
+@property (strong, nonatomic) IBOutlet FFButton *button3;
+@property (strong, nonatomic) IBOutlet FFButton *button4;
+@property (strong, nonatomic) IBOutlet FFButton *button5;
+@property (strong, nonatomic) IBOutlet FFButton *button6;
 
 - (IBAction)emergencyClick:(id)sender;
 - (IBAction)takeoffClick:(id)sender;

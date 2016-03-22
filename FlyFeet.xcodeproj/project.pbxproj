@@ -15,6 +15,11 @@
 		0324030D1CA0E214002E4AEE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0324030B1CA0E214002E4AEE /* LaunchScreen.xib */; };
 		032403101CA0E248002E4AEE /* PilotingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0324030F1CA0E248002E4AEE /* PilotingViewController.m */; };
 		032403121CA0E3CC002E4AEE /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032403111CA0E3CC002E4AEE /* Launch Screen.storyboard */; };
+		032403191CA0E976002E4AEE /* FFUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 032403181CA0E976002E4AEE /* FFUtility.m */; };
+		0324031C1CA0E9F6002E4AEE /* FFButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0324031B1CA0E9F6002E4AEE /* FFButton.m */; };
+		0324031E1CA0EB46002E4AEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0324031D1CA0EB46002E4AEE /* Foundation.framework */; };
+		032403201CA0EB4B002E4AEE /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0324031F1CA0EB4B002E4AEE /* ImageIO.framework */; };
+		032403221CA0EB57002E4AEE /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032403211CA0EB57002E4AEE /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,14 @@
 		0324030E1CA0E248002E4AEE /* PilotingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PilotingViewController.h; sourceTree = "<group>"; };
 		0324030F1CA0E248002E4AEE /* PilotingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PilotingViewController.m; sourceTree = "<group>"; };
 		032403111CA0E3CC002E4AEE /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		032403131CA0E8D2002E4AEE /* PNTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNTAppDelegate.h; sourceTree = "<group>"; };
+		032403171CA0E95A002E4AEE /* FFUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFUtility.h; sourceTree = "<group>"; };
+		032403181CA0E976002E4AEE /* FFUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFUtility.m; sourceTree = "<group>"; };
+		0324031A1CA0E9D5002E4AEE /* FFButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFButton.h; sourceTree = "<group>"; };
+		0324031B1CA0E9F6002E4AEE /* FFButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFButton.m; sourceTree = "<group>"; };
+		0324031D1CA0EB46002E4AEE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0324031F1CA0EB4B002E4AEE /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		032403211CA0EB57002E4AEE /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +51,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				032403221CA0EB57002E4AEE /* AssetsLibrary.framework in Frameworks */,
+				032403201CA0EB4B002E4AEE /* ImageIO.framework in Frameworks */,
+				0324031E1CA0EB46002E4AEE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +63,9 @@
 		032402E81CA0E120002E4AEE = {
 			isa = PBXGroup;
 			children = (
+				032403211CA0EB57002E4AEE /* AssetsLibrary.framework */,
+				0324031F1CA0EB4B002E4AEE /* ImageIO.framework */,
+				0324031D1CA0EB46002E4AEE /* Foundation.framework */,
 				032402F31CA0E120002E4AEE /* FlyFeet */,
 				032402F21CA0E120002E4AEE /* Products */,
 			);
@@ -65,8 +84,13 @@
 			children = (
 				0324030E1CA0E248002E4AEE /* PilotingViewController.h */,
 				0324030F1CA0E248002E4AEE /* PilotingViewController.m */,
+				032403131CA0E8D2002E4AEE /* PNTAppDelegate.h */,
 				032402F71CA0E120002E4AEE /* AppDelegate.h */,
 				032402F81CA0E120002E4AEE /* AppDelegate.m */,
+				032403171CA0E95A002E4AEE /* FFUtility.h */,
+				032403181CA0E976002E4AEE /* FFUtility.m */,
+				0324031A1CA0E9D5002E4AEE /* FFButton.h */,
+				0324031B1CA0E9F6002E4AEE /* FFButton.m */,
 				032402FA1CA0E120002E4AEE /* ViewController.h */,
 				032402FB1CA0E120002E4AEE /* ViewController.m */,
 				032402FD1CA0E120002E4AEE /* Main.storyboard */,
@@ -161,8 +185,10 @@
 			files = (
 				032403101CA0E248002E4AEE /* PilotingViewController.m in Sources */,
 				032402FC1CA0E120002E4AEE /* ViewController.m in Sources */,
+				032403191CA0E976002E4AEE /* FFUtility.m in Sources */,
 				032402F91CA0E120002E4AEE /* AppDelegate.m in Sources */,
 				032402F61CA0E120002E4AEE /* main.m in Sources */,
+				0324031C1CA0E9F6002E4AEE /* FFButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,12 +300,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				"HEADER_SEARCH_PATHS[sdk=iphoneos*]" = "/Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphoneos/staging/usr/include";
 				"HEADER_SEARCH_PATHS[sdk=iphonesimulator*]" = "/Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphonesimulator/staging/usr/include";
 				INFOPLIST_FILE = FlyFeet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "/Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphoneos/staging/usr/lib";
 				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = "/Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphonesimulator/staging/usr/lib";
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-larcommands",
 					"-larcontroller",
@@ -301,6 +329,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = nsuarez.FlyFeet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv6 armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -308,12 +337,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				"HEADER_SEARCH_PATHS[sdk=iphoneos*]" = "/Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphoneos/staging/usr/include";
 				"HEADER_SEARCH_PATHS[sdk=iphonesimulator*]" = "/Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphonesimulator/staging/usr/include";
 				INFOPLIST_FILE = FlyFeet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "/Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphoneos/staging/usr/lib";
 				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = "/Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphonesimulator/staging/usr/lib";
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-larcommands",
 					"-larcontroller",
@@ -335,6 +366,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = nsuarez.FlyFeet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv6 armv7 armv7s arm64";
 			};
 			name = Release;
 		};

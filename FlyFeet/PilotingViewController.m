@@ -40,6 +40,8 @@
 #import <libARDiscovery/ARDiscovery.h>
 #import <libARController/ARController.h>
 #import <uthash/uthash.h>
+#import "FFUtility.h"
+#import "FFButton.h"
 
 void stateChanged (eARCONTROLLER_DEVICE_STATE newState, eARCONTROLLER_ERROR error, void *customData);
 void onCommandReceived (eARCONTROLLER_DICTIONARY_KEY commandKey, ARCONTROLLER_DICTIONARY_ELEMENT_t *elementDictionary, void *customData);
@@ -61,6 +63,10 @@ void onCommandReceived (eARCONTROLLER_DICTIONARY_KEY commandKey, ARCONTROLLER_DI
     
     _alertView = [[UIAlertView alloc] initWithTitle:[_service name] message:@"Connecting ..."
                                            delegate:self cancelButtonTitle:nil otherButtonTitles:nil, nil];
+    
+    NSArray *buttons = @[self.button0, self.button1, self.button2, self.button3, self.button4, self.button5, self.button6];
+    FFUtility *utility = [FFUtility sharedUtility];
+    utility.buttons = buttons;
     
     _deviceController = NULL;
     _stateSem = dispatch_semaphore_create(0);
