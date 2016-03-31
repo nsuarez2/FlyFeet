@@ -55,6 +55,13 @@
 @property (strong, nonatomic) IBOutlet FFButton *button5;
 @property (strong, nonatomic) IBOutlet FFButton *button6;
 
+@property (strong, nonatomic) IBOutlet FFButton *path1;
+@property (strong, nonatomic) IBOutlet FFButton *path2;
+@property (strong, nonatomic) IBOutlet FFButton *path3;
+@property (strong, nonatomic) IBOutlet FFButton *path0;
+
+@property Boolean isFlying;
+
 - (IBAction)emergencyClick:(id)sender;
 - (IBAction)takeoffClick:(id)sender;
 - (IBAction)landingClick:(id)sender;

@@ -304,6 +304,7 @@
 				"HEADER_SEARCH_PATHS[sdk=iphoneos*]" = "/Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphoneos/staging/usr/include";
 				"HEADER_SEARCH_PATHS[sdk=iphonesimulator*]" = "/Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphonesimulator/staging/usr/include";
 				INFOPLIST_FILE = FlyFeet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "/Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphoneos/staging/usr/lib";
 				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = "/Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphonesimulator/staging/usr/lib";
@@ -327,8 +328,9 @@
 					"-lssl",
 					"-lz",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nsuarez.FlyFeet;
+				PRODUCT_BUNDLE_IDENTIFIER = nsuarez.FlyFeet1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv6 armv7 armv7s arm64";
 			};
 			name = Debug;
@@ -341,6 +343,7 @@
 				"HEADER_SEARCH_PATHS[sdk=iphoneos*]" = "/Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphoneos/staging/usr/include";
 				"HEADER_SEARCH_PATHS[sdk=iphonesimulator*]" = "/Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphonesimulator/staging/usr/include";
 				INFOPLIST_FILE = FlyFeet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "/Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphoneos/staging/usr/lib";
 				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = "/Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphonesimulator/staging/usr/lib";
@@ -364,8 +367,9 @@
 					"-lssl",
 					"-lz",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nsuarez.FlyFeet;
+				PRODUCT_BUNDLE_IDENTIFIER = nsuarez.FlyFeet1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv6 armv7 armv7s arm64";
 			};
 			name = Release;
@@ -389,6 +393,7 @@
 				0324030A1CA0E120002E4AEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -64,12 +64,14 @@ void onCommandReceived (eARCONTROLLER_DICTIONARY_KEY commandKey, ARCONTROLLER_DI
     _alertView = [[UIAlertView alloc] initWithTitle:[_service name] message:@"Connecting ..."
                                            delegate:self cancelButtonTitle:nil otherButtonTitles:nil, nil];
     
-    NSArray *buttons = @[self.button0, self.button1, self.button2, self.button3, self.button4, self.button5, self.button6];
+    NSArray *buttons = @[self.button0, self.button1, self.button2, self.button3, self.button4, self.button5, self.button6, self.path0, self.path1, self.path2, self.path3];
     FFUtility *utility = [FFUtility sharedUtility];
     utility.buttons = buttons;
     
     _deviceController = NULL;
     _stateSem = dispatch_semaphore_create(0);
+    
+    _isFlying = false;
 }
 
 - (void) viewDidAppear:(BOOL)animated
@@ -311,6 +313,17 @@ void onCommandReceived (eARCONTROLLER_DICTIONARY_KEY commandKey, ARCONTROLLER_DI
     _deviceController->miniDrone->sendPilotingEmergency(_deviceController->miniDrone);
 }
 
+- (IBAction)TakeoffAndLand:(id)sender
+{
+    if (_isFlying) {
+        _deviceController->miniDrone->sendPilotingLanding(_deviceController->miniDrone);
+        _isFlying = false;
+    } else {
+        _deviceController->miniDrone->sendPilotingTakeOff(_deviceController->miniDrone);
+        _isFlying = true;
+    }
+    
+}
 - (IBAction)takeoffClick:(id)sender
 {
     _deviceController->miniDrone->sendPilotingTakeOff(_deviceController->miniDrone);

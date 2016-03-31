@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>ZUMCNB2DPF.nsuarez.FlyFeet</string>
+	<string>ZUMCNB2DPF.nsuarez.FlyFeet1</string>
 	<key>com.apple.developer.team-identifier</key>
 	<string>ZUMCNB2DPF</string>
 	<key>get-task-allow</key>
 	<true/>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>ZUMCNB2DPF.nsuarez.FlyFeet</string>
+		<string>ZUMCNB2DPF.nsuarez.FlyFeet1</string>
 	</array>
 </dict>
 </plist>

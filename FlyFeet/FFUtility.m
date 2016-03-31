@@ -18,6 +18,7 @@
 const double x_mult = 1.988;
 const double y_mult = 1.995;
 
+
 #define p1 {0 * x_mult,0 * y_mult}
 #define p2 {105.212 * x_mult,0 * y_mult}
 #define p3 {409.788 * x_mult,0 * y_mult}
@@ -36,6 +37,9 @@ CGPoint points2[7] = {p2, p4, p6, p3, p3, p8, p5};
 CGPoint points3[7] = {p10, p12, p8, p6, p11, p11, p7};
 CGPoint points4[7] = {p9, p11, p7, p5, p8, p10, p10};
 
+CGPoint points5[4] = {p2, p3, p11, p10};
+CGPoint points6[4] = {p5, p6, p8, p7};
+
 + (instancetype)sharedUtility {
     
     static FFUtility *sharedUtility = nil;
@@ -49,38 +53,51 @@ CGPoint points4[7] = {p9, p11, p7, p5, p8, p10, p10};
 - (UIBezierPath *)bezierPathForButton:(UIButton *)button {
     
     int index = [self.buttons indexOfObject:button];
-    CGPoint point1  = points1[index % 7];
-    CGPoint point2 = points2[(index) % 7];
-    CGPoint point3  = points3[index % 7];
-    CGPoint point4  = points4[index % 7];
-    UIBezierPath *bezierPath = [UIBezierPath bezierPath];
-    [bezierPath moveToPoint:point1];
-    [bezierPath addLineToPoint:point2];
-    [bezierPath addLineToPoint:point3];
-    [bezierPath addLineToPoint:point4];
-    [bezierPath closePath];
-    return bezierPath;
+    
+    if (index < 7) {
+        CGPoint point1  = points1[index % 7];
+        CGPoint point2 = points2[(index) % 7];
+        CGPoint point3  = points3[index % 7];
+        CGPoint point4  = points4[index % 7];
+        UIBezierPath *bezierPath = [UIBezierPath bezierPath];
+        [bezierPath moveToPoint:point1];
+        [bezierPath addLineToPoint:point2];
+        [bezierPath addLineToPoint:point3];
+        [bezierPath addLineToPoint:point4];
+        [bezierPath closePath];
+        return bezierPath;
+    } else {
+        CGPoint point1 = points5[index % 4];
+        CGPoint point2 = points6[index % 4];
+        UIBezierPath *bezierPath = [UIBezierPath bezierPath];
+        [bezierPath moveToPoint:point1];
+        [bezierPath addLineToPoint:point2];
+        [bezierPath closePath];
+        return bezierPath;
+    }
+    
+    
 }
 
 - (UIColor *)colorForButton:(UIButton *)button {
     
     int index = [self.buttons indexOfObject:button];
     if (index == 0) {
-        return [UIColor redColor];
+        return [UIColor blackColor];
     } else if (index == 1) {
         return [UIColor blackColor];
     } else if (index == 2) {
-        return [UIColor yellowColor];
+        return [UIColor blackColor];
     } else if(index == 3) {
-        return [UIColor greenColor];
+        return [UIColor yellowColor];
     } else if (index == 4) {
-        return [UIColor grayColor];
+        return [UIColor blueColor];
     } else if (index == 5) {
-        return [UIColor cyanColor];
+        return [UIColor yellowColor];
     } else if (index == 6) {
         return [UIColor blueColor];
     } else {
-        return [UIColor magentaColor];
+        return [UIColor yellowColor];
     }
 }
 
