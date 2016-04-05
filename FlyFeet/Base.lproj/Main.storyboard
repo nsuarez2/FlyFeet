@@ -105,7 +105,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edx-bo-zBk" userLabel="Button2" customClass="FFButton">
                                 <rect key="frame" x="0.0" y="0.0" width="2048" height="1536"/>
                                 <connections>
-                                    <action selector="TakeoffAndLand:" destination="h7l-W5-mPq" eventType="touchUpInside" id="jNS-Ub-qwy"/>
+                                    <segue destination="A7n-NX-kTH" kind="showDetail" identifier="MoreActions" action="showViewController:sender:" id="MnC-pu-wFg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbF-4e-eS4" userLabel="Button3" customClass="FFButton">
@@ -145,15 +145,12 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMv-DE-Z7W" userLabel="Path1" customClass="FFButton">
                                 <rect key="frame" x="0.0" y="0.0" width="2048" height="1536"/>
-                                <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgO-Ka-39o" userLabel="Path2" customClass="FFButton">
                                 <rect key="frame" x="0.0" y="0.0" width="2048" height="1536"/>
-                                <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XmU-oz-E5h" userLabel="Path3" customClass="FFButton">
                                 <rect key="frame" x="0.0" y="0.0" width="2048" height="1536"/>
-                                <state key="normal" title="Button"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xX9-x8-Ti2">
                                 <rect key="frame" x="100" y="1420" width="100" height="30"/>
