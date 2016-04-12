@@ -1,11 +1,3 @@
-//
-//  FFUtility.m
-//  FlyFeet
-//
-//  Created by Nico Suarez on 3/21/16.
-//  Copyright © 2016 Nico Suarez. All rights reserved.
-//
-
 #import "FFUtility.h"
 #import <CoreGraphics/CoreGraphics.h>
 #import <UIKit/UIKit.h>
@@ -17,6 +9,9 @@
 //Based at 515x385
 const double x_mult = 1.988;
 const double y_mult = 1.995;
+
+//const double x_mult = 1;
+//const double y_mult = 1;
 
 
 #define p1 {0 * x_mult,0 * y_mult}
@@ -31,6 +26,8 @@ const double y_mult = 1.995;
 #define p10 {105.212 * x_mult,385 * y_mult}
 #define p11 {409.788 * x_mult,385 * y_mult}
 #define p12 {515 * x_mult,385 * y_mult}
+
+
 
 CGPoint points1[7] = {p1, p3, p5, p2, p6, p7, p2};
 CGPoint points2[7] = {p2, p4, p6, p3, p3, p8, p5};

@@ -1,11 +1,3 @@
-//
-//  FFButton.m
-//  FlyFeet
-//
-//  Created by Nico Suarez on 3/21/16.
-//  Copyright © 2016 Nico Suarez. All rights reserved.
-//
-
 #import "FFButton.h"
 #import "FFUtility.h"
 

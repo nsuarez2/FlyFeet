@@ -20,6 +20,8 @@
 		0324031E1CA0EB46002E4AEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0324031D1CA0EB46002E4AEE /* Foundation.framework */; };
 		032403201CA0EB4B002E4AEE /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0324031F1CA0EB4B002E4AEE /* ImageIO.framework */; };
 		032403221CA0EB57002E4AEE /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032403211CA0EB57002E4AEE /* AssetsLibrary.framework */; };
+		0385370A1CB6F1D9008DA53E /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 038537091CB6F1D9008DA53E /* MoreViewController.m */; };
+		0385370C1CB6F804008DA53E /* DismissSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0385370B1CB6F804008DA53E /* DismissSegue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +38,6 @@
 		0324030E1CA0E248002E4AEE /* PilotingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PilotingViewController.h; sourceTree = "<group>"; };
 		0324030F1CA0E248002E4AEE /* PilotingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PilotingViewController.m; sourceTree = "<group>"; };
 		032403111CA0E3CC002E4AEE /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		032403131CA0E8D2002E4AEE /* PNTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNTAppDelegate.h; sourceTree = "<group>"; };
 		032403171CA0E95A002E4AEE /* FFUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFUtility.h; sourceTree = "<group>"; };
 		032403181CA0E976002E4AEE /* FFUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFUtility.m; sourceTree = "<group>"; };
 		0324031A1CA0E9D5002E4AEE /* FFButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFButton.h; sourceTree = "<group>"; };
@@ -44,6 +45,10 @@
 		0324031D1CA0EB46002E4AEE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0324031F1CA0EB4B002E4AEE /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		032403211CA0EB57002E4AEE /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		035DDC311CB6CD9E00B3DF8B /* MoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		038537091CB6F1D9008DA53E /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		0385370B1CB6F804008DA53E /* DismissSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissSegue.m; sourceTree = "<group>"; };
+		0385370D1CB6F81E008DA53E /* DismissSegue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DismissSegue.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +89,10 @@
 			children = (
 				0324030E1CA0E248002E4AEE /* PilotingViewController.h */,
 				0324030F1CA0E248002E4AEE /* PilotingViewController.m */,
-				032403131CA0E8D2002E4AEE /* PNTAppDelegate.h */,
+				035DDC311CB6CD9E00B3DF8B /* MoreViewController.h */,
+				038537091CB6F1D9008DA53E /* MoreViewController.m */,
+				0385370B1CB6F804008DA53E /* DismissSegue.m */,
+				0385370D1CB6F81E008DA53E /* DismissSegue.h */,
 				032402F71CA0E120002E4AEE /* AppDelegate.h */,
 				032402F81CA0E120002E4AEE /* AppDelegate.m */,
 				032403171CA0E95A002E4AEE /* FFUtility.h */,
@@ -188,7 +196,9 @@
 				032403191CA0E976002E4AEE /* FFUtility.m in Sources */,
 				032402F91CA0E120002E4AEE /* AppDelegate.m in Sources */,
 				032402F61CA0E120002E4AEE /* main.m in Sources */,
+				0385370A1CB6F1D9008DA53E /* MoreViewController.m in Sources */,
 				0324031C1CA0E9F6002E4AEE /* FFButton.m in Sources */,
+				0385370C1CB6F804008DA53E /* DismissSegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

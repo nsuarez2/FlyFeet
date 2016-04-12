@@ -47,4 +47,5 @@ dependencies: \
   /Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphonesimulator/staging/usr/include/libARCommands/ARCOMMANDS_Filter.h \
   /Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphonesimulator/staging/usr/include/libARCommands/ARCOMMANDS_Version.h \
   /Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphonesimulator/staging/usr/include/libARController/ARCONTROLLER_Device.h \
-  /Users/Nico/Documents/Classes/481/FlyFeet/FlyFeet/FFUtility.h
+  /Users/Nico/Documents/Classes/481/FlyFeet/FlyFeet/FFUtility.h \
+  /Users/Nico/Documents/Classes/481/FlyFeet/FlyFeet/MoreViewController.h

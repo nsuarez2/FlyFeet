@@ -1,14 +1,10 @@
-//
-//  AppDelegate.h
-//  FlyFeet
-//
-//  Created by Nico Suarez on 3/21/16.
-//  Copyright © 2016 Nico Suarez. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
+#import "FFButton.h"
+#import "PilotingViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (nonatomic) ARCONTROLLER_Device_t *delegateController;
 
 @property (strong, nonatomic) UIWindow *window;
 

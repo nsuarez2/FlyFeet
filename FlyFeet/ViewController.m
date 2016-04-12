@@ -1,11 +1,3 @@
-//
-//  ViewController.m
-//  FlyFeet
-//
-//  Created by Nico Suarez on 3/21/16.
-//  Copyright © 2016 Nico Suarez. All rights reserved.
-//
-
 #import "ViewController.h"
 #import <libARDiscovery/ARDISCOVERY_BonjourDiscovery.h>
 #import "PilotingViewController.h"
@@ -41,7 +33,10 @@
     
     [self registerApplicationNotifications];
     // start the discovery
+    
+    NSLog(@"ABOUT TO START DISCOVERY... ");
     [[ARDiscovery sharedInstance] start];
+    NSLog(@"DONE WITH DISCOVERY... ");
 }
 
 - (void) viewDidDisappear:(BOOL)animated

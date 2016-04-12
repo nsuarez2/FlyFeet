@@ -4,6 +4,7 @@ dependencies: \
   /Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphonesimulator/staging/usr/include/libARDiscovery/ARDISCOVERY_BonjourDiscovery.h \
   /Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphonesimulator/staging/usr/include/libARSAL/ARSAL_CentralManager.h \
   /Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphonesimulator/staging/usr/include/libARDiscovery/ARDISCOVERY_Discovery.h \
+  /Users/Nico/Documents/Classes/481/FlyFeet/FlyFeet/FFButton.h \
   /Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphonesimulator/staging/usr/include/libARDiscovery/ARDiscovery.h \
   /Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphonesimulator/staging/usr/include/libARDiscovery/ARDISCOVERY_Connection.h \
   /Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphonesimulator/staging/usr/include/libARDiscovery/ARDISCOVERY_Error.h \
@@ -45,4 +46,5 @@ dependencies: \
   /Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphonesimulator/staging/usr/include/libARCommands/ARCOMMANDS_Generator.h \
   /Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphonesimulator/staging/usr/include/libARCommands/ARCOMMANDS_Filter.h \
   /Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphonesimulator/staging/usr/include/libARCommands/ARCOMMANDS_Version.h \
-  /Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphonesimulator/staging/usr/include/libARController/ARCONTROLLER_Device.h
+  /Users/Nico/ARSDK3_iOS_3_8_3/iOS-iphonesimulator/staging/usr/include/libARController/ARCONTROLLER_Device.h \
+  /Users/Nico/Documents/Classes/481/FlyFeet/FlyFeet/FFUtility.h

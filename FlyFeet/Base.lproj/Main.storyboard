@@ -83,7 +83,7 @@
                         <viewControllerLayoutGuide type="bottom" id="IrK-7n-FPb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="f1G-oB-rrQ" userLabel="Piloting View Controller">
-                        <rect key="frame" x="0.0" y="0.0" width="2048" height="1536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPf-eM-343" userLabel="Button0" customClass="FFButton">
@@ -105,7 +105,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edx-bo-zBk" userLabel="Button2" customClass="FFButton">
                                 <rect key="frame" x="0.0" y="0.0" width="2048" height="1536"/>
                                 <connections>
-                                    <segue destination="A7n-NX-kTH" kind="showDetail" identifier="MoreActions" action="showViewController:sender:" id="MnC-pu-wFg"/>
+                                    <segue destination="A7n-NX-kTH" kind="presentation" identifier="showMore" modalPresentationStyle="overFullScreen" modalTransitionStyle="coverVertical" id="xDm-0A-V3D"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbF-4e-eS4" userLabel="Button3" customClass="FFButton">
@@ -149,9 +149,6 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgO-Ka-39o" userLabel="Path2" customClass="FFButton">
                                 <rect key="frame" x="0.0" y="0.0" width="2048" height="1536"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XmU-oz-E5h" userLabel="Path3" customClass="FFButton">
-                                <rect key="frame" x="0.0" y="0.0" width="2048" height="1536"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xX9-x8-Ti2">
                                 <rect key="frame" x="100" y="1420" width="100" height="30"/>
                                 <constraints>
@@ -186,6 +183,31 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Down" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHB-ym-KBh">
+                                <rect key="frame" x="82" y="374" width="44" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Up" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y43-Qf-toD">
+                                <rect key="frame" x="898" y="373" width="42" height="21"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="More" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q96-v6-uBs" userLabel="More">
+                                <rect key="frame" x="491" y="374" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XmU-oz-E5h" userLabel="Path3" customClass="FFButton">
+                                <rect key="frame" x="0.0" y="0.0" width="2048" height="1536"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -203,7 +225,7 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="2048" height="1536"/>
+                    <size key="freeformSize" width="1024" height="768"/>
                     <connections>
                         <outlet property="batteryLabel" destination="xX9-x8-Ti2" id="7J8-gt-GBW"/>
                         <outlet property="button0" destination="KPf-eM-343" id="6rD-ZA-Ba2"/>
@@ -223,51 +245,81 @@
             </objects>
             <point key="canvasLocation" x="873" y="1164"/>
         </scene>
-        <!--Piloting View Controller-->
+        <!--More View Controller-->
         <scene sceneID="zwi-cB-yg4">
             <objects>
-                <viewController id="A7n-NX-kTH" customClass="PilotingViewController" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overCurrentContext" id="A7n-NX-kTH" customClass="MoreViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hqR-aD-6Ep"/>
                         <viewControllerLayoutGuide type="bottom" id="VEY-qM-tAx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YHx-Or-jWT">
-                        <rect key="frame" x="0.0" y="0.0" width="2048" height="1536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHL-4E-Rri" userLabel="Back">
-                                <rect key="frame" x="0.0" y="1436" width="2048" height="100"/>
+                                <rect key="frame" x="0.0" y="668" width="1024" height="100"/>
+                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="h7l-W5-mPq" kind="show" id="vSO-mW-boW"/>
+                                    <segue destination="h7l-W5-mPq" kind="custom" customClass="DismissSegue" id="qJt-Ef-TaL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q62-ca-KGV">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1436"/>
-                                <state key="normal" title="TakeOff"/>
-                                <connections>
-                                    <action selector="takeoffClick:" destination="A7n-NX-kTH" eventType="touchUpInside" id="l8U-cg-2QR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qv-n8-pzo">
-                                <rect key="frame" x="1024" y="0.0" width="1024" height="1436"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Htl-68-ghH">
+                                <rect key="frame" x="0.0" y="334" width="512" height="334"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Land"/>
                                 <connections>
-                                    <action selector="landingClick:" destination="A7n-NX-kTH" eventType="touchUpInside" id="EKg-V2-Kd2"/>
+                                    <action selector="landing:" destination="A7n-NX-kTH" eventType="touchUpInside" id="IQq-Ul-ZBU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tO-nE-YoA">
+                                <rect key="frame" x="512" y="334" width="512" height="334"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="TakeOff"/>
+                                <connections>
+                                    <action selector="takeoff:" destination="A7n-NX-kTH" eventType="touchDown" id="zvx-2t-2dp"/>
+                                    <segue destination="h7l-W5-mPq" kind="custom" customClass="DismissSegue" id="5z4-mx-fBB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NaJ-xF-v5k">
+                                <rect key="frame" x="0.0" y="0.0" width="512" height="334"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Flip"/>
+                                <connections>
+                                    <action selector="flip:" destination="A7n-NX-kTH" eventType="touchUpInside" id="Cqh-oT-7p3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiW-yQ-zuY">
+                                <rect key="frame" x="512" y="0.0" width="512" height="334"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Picture"/>
+                                <connections>
+                                    <action selector="spin:" destination="A7n-NX-kTH" eventType="touchUpInside" id="Axz-2c-fMK"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="2048" height="1536"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="backButton" destination="sHL-4E-Rri" id="qAN-e4-pHy"/>
+                        <outlet property="flipButton" destination="NaJ-xF-v5k" id="DuC-eJ-Ddf"/>
+                        <outlet property="landButton" destination="Htl-68-ghH" id="Hfi-wj-xxy"/>
+                        <outlet property="spinButton" destination="hiW-yQ-zuY" id="r9x-cJ-QI6"/>
+                        <outlet property="takeOffButton" destination="6tO-nE-YoA" id="zu4-bp-B9M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdR-rI-3qg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3552" y="564"/>
+            <point key="canvasLocation" x="2829.5" y="467.5"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vSO-mW-boW"/>
+        <segue reference="qJt-Ef-TaL"/>
     </inferredMetricsTieBreakers>
 </document>

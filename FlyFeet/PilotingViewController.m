@@ -1,47 +1,11 @@
-/*
-    Copyright (C) 2014 Parrot SA
-
-    Redistribution and use in source and binary forms, with or without
-    modification, are permitted provided that the following conditions
-    are met:
-    * Redistributions of source code must retain the above copyright
-      notice, this list of conditions and the following disclaimer.
-    * Redistributions in binary form must reproduce the above copyright
-      notice, this list of conditions and the following disclaimer in
-      the documentation and/or other materials provided with the 
-      distribution.
-    * Neither the name of Parrot nor the names
-      of its contributors may be used to endorse or promote products
-      derived from this software without specific prior written
-      permission.
-
-    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-    "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-    LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
-    FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
-    COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
-    INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
-    BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS
-    OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED 
-    AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-    OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
-    OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
-    SUCH DAMAGE.
-*/
-//
-//  PilotingViewController.m
-//  RollingSpiderPiloting
-//
-//  Created on 19/01/2015.
-//  Copyright (c) 2015 Parrot. All rights reserved.
-//
-
 #import "PilotingViewController.h"
 #import <libARDiscovery/ARDiscovery.h>
 #import <libARController/ARController.h>
 #import <uthash/uthash.h>
 #import "FFUtility.h"
 #import "FFButton.h"
+#import "MoreViewController.h"
+#import "AppDelegate.h"
 
 void stateChanged (eARCONTROLLER_DEVICE_STATE newState, eARCONTROLLER_ERROR error, void *customData);
 void onCommandReceived (eARCONTROLLER_DICTIONARY_KEY commandKey, ARCONTROLLER_DICTIONARY_ELEMENT_t *elementDictionary, void *customData);
@@ -59,7 +23,7 @@ void onCommandReceived (eARCONTROLLER_DICTIONARY_KEY commandKey, ARCONTROLLER_DI
     [super viewDidLoad];
     NSLog(@"viewDidLoad ...");
     
-    [_batteryLabel setText:@"?%"];
+    [_batteryLabel setText:@"waiting"];
     
     _alertView = [[UIAlertView alloc] initWithTitle:[_service name] message:@"Connecting ..."
                                            delegate:self cancelButtonTitle:nil otherButtonTitles:nil, nil];
@@ -129,6 +93,10 @@ void onCommandReceived (eARCONTROLLER_DICTIONARY_KEY commandKey, ARCONTROLLER_DI
         NSLog(@"- ARCONTROLLER_Device_New ... ");
         _deviceController = ARCONTROLLER_Device_New (discoveryDevice, &error);
         
+        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        
+        appDelegate.delegateController = self.deviceController;
+        
         if ((error != ARCONTROLLER_OK) || (_deviceController == NULL))
         {
             NSLog(@"- error :%s", ARCONTROLLER_Error_ToString(error));
@@ -183,6 +151,9 @@ void onCommandReceived (eARCONTROLLER_DICTIONARY_KEY commandKey, ARCONTROLLER_DI
 
 - (void) viewDidDisappear:(BOOL)animated
 {
+    
+    _deviceController->miniDrone->sendPilotingLanding(_deviceController->miniDrone);
+    
     if (_alertView && !_alertView.isHidden)
     {
         [_alertView dismissWithClickedButtonIndex:0 animated:NO];
@@ -313,27 +284,6 @@ void onCommandReceived (eARCONTROLLER_DICTIONARY_KEY commandKey, ARCONTROLLER_DI
     _deviceController->miniDrone->sendPilotingEmergency(_deviceController->miniDrone);
 }
 
-- (IBAction)TakeoffAndLand:(id)sender
-{
-    if (_isFlying) {
-        _deviceController->miniDrone->sendPilotingLanding(_deviceController->miniDrone);
-        _isFlying = false;
-    } else {
-        _deviceController->miniDrone->sendPilotingTakeOff(_deviceController->miniDrone);
-        _isFlying = true;
-    }
-    
-}
-- (IBAction)takeoffClick:(id)sender
-{
-    _deviceController->miniDrone->sendPilotingTakeOff(_deviceController->miniDrone);
-}
-
-- (IBAction)landingClick:(id)sender
-{
-    _deviceController->miniDrone->sendPilotingLanding(_deviceController->miniDrone);
-}
-
 //events for gaz:
 - (IBAction)gazUpTouchDown:(id)sender
 {
@@ -352,6 +302,7 @@ void onCommandReceived (eARCONTROLLER_DICTIONARY_KEY commandKey, ARCONTROLLER_DI
 - (IBAction)gazDownTouchUp:(id)sender
 {
     _deviceController->miniDrone->setPilotingPCMDGaz(_deviceController->miniDrone, 0);
+
 }
 
 //events for yaw:
@@ -367,11 +318,15 @@ void onCommandReceived (eARCONTROLLER_DICTIONARY_KEY commandKey, ARCONTROLLER_DI
 - (IBAction)yawLeftTouchUp:(id)sender
 {
     _deviceController->miniDrone->setPilotingPCMDYaw(_deviceController->miniDrone, 0);
+    _deviceController->miniDrone->sendPilotingFlatTrim(_deviceController->miniDrone);
+    
 }
 
 - (IBAction)yawRightTouchUp:(id)sender
 {
     _deviceController->miniDrone->setPilotingPCMDYaw(_deviceController->miniDrone, 0);
+    _deviceController->miniDrone->sendPilotingFlatTrim(_deviceController->miniDrone);
+
 }
 
 //events for yaw:
@@ -418,6 +373,19 @@ void onCommandReceived (eARCONTROLLER_DICTIONARY_KEY commandKey, ARCONTROLLER_DI
 {
     _deviceController->miniDrone->setPilotingPCMDFlag(_deviceController->miniDrone, 0);
     _deviceController->miniDrone->setPilotingPCMDPitch(_deviceController->miniDrone, 0);
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{    if ([[segue identifier] isEqualToString:@"showMore"])
+    {
+        NSLog(@"PREPARE TO SEGUE");
+        MoreViewController *vc = [segue destinationViewController];
+        vc.moreController = self.deviceController;
+    }
+}
+
+-(void)land {
+    _deviceController->miniDrone->sendPilotingLanding(_deviceController->miniDrone);
 }
 
 #pragma mark UI updates from commands
