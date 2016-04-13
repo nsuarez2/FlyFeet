@@ -10,7 +10,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *landButton;
 @property (strong, nonatomic) IBOutlet UIButton *takeOffButton;
 @property (strong, nonatomic) IBOutlet UIButton *flipButton;
-@property (strong, nonatomic) IBOutlet UIButton *spinButton;
+@property (strong, nonatomic) IBOutlet UIButton *cameraButton;
 
 @property Boolean isFlying;
 
@@ -18,6 +18,7 @@
 
 - (IBAction)takeoff:(id)sender;
 - (IBAction)landing:(id)sender;
-
+- (IBAction)flip:(id)sender;
+- (IBAction)takePic:(id)sender;
 
 @end

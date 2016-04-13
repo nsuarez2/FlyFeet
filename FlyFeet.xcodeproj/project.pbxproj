@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030FABB01CBD5F2D009022E0 /* upArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 030FABAF1CBD5F2D009022E0 /* upArrow.png */; };
+		030FABB21CBD5F33009022E0 /* downArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 030FABB11CBD5F33009022E0 /* downArrow.png */; };
+		030FABB91CBD6033009022E0 /* backwardArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 030FABB41CBD6033009022E0 /* backwardArrow.png */; };
+		030FABBA1CBD6033009022E0 /* forwardArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 030FABB51CBD6033009022E0 /* forwardArrow.png */; };
+		030FABBB1CBD6033009022E0 /* leftYaw.png in Resources */ = {isa = PBXBuildFile; fileRef = 030FABB61CBD6033009022E0 /* leftYaw.png */; };
+		030FABBC1CBD6033009022E0 /* rightYaw.png in Resources */ = {isa = PBXBuildFile; fileRef = 030FABB71CBD6033009022E0 /* rightYaw.png */; };
 		032402F61CA0E120002E4AEE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 032402F51CA0E120002E4AEE /* main.m */; };
 		032402F91CA0E120002E4AEE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 032402F81CA0E120002E4AEE /* AppDelegate.m */; };
 		032402FC1CA0E120002E4AEE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 032402FB1CA0E120002E4AEE /* ViewController.m */; };
@@ -22,9 +28,20 @@
 		032403221CA0EB57002E4AEE /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032403211CA0EB57002E4AEE /* AssetsLibrary.framework */; };
 		0385370A1CB6F1D9008DA53E /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 038537091CB6F1D9008DA53E /* MoreViewController.m */; };
 		0385370C1CB6F804008DA53E /* DismissSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0385370B1CB6F804008DA53E /* DismissSegue.m */; };
+		03E95F271CBEE1C20036C3ED /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E95F261CBEE1C20036C3ED /* camera.png */; };
+		03E95F291CBEE1D60036C3ED /* land.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E95F281CBEE1D60036C3ED /* land.png */; };
+		03E95F2B1CBEE1E00036C3ED /* takeOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E95F2A1CBEE1E00036C3ED /* takeOff.png */; };
+		03E95F2D1CBEE47B0036C3ED /* backFlip.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E95F2C1CBEE47B0036C3ED /* backFlip.png */; };
+		03E95F2F1CBEE5400036C3ED /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E95F2E1CBEE5400036C3ED /* back.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		030FABAF1CBD5F2D009022E0 /* upArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upArrow.png; sourceTree = "<group>"; };
+		030FABB11CBD5F33009022E0 /* downArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downArrow.png; sourceTree = "<group>"; };
+		030FABB41CBD6033009022E0 /* backwardArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backwardArrow.png; sourceTree = "<group>"; };
+		030FABB51CBD6033009022E0 /* forwardArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forwardArrow.png; sourceTree = "<group>"; };
+		030FABB61CBD6033009022E0 /* leftYaw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftYaw.png; sourceTree = "<group>"; };
+		030FABB71CBD6033009022E0 /* rightYaw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightYaw.png; sourceTree = "<group>"; };
 		032402F11CA0E120002E4AEE /* FlyFeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyFeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		032402F51CA0E120002E4AEE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		032402F71CA0E120002E4AEE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -49,6 +66,11 @@
 		038537091CB6F1D9008DA53E /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		0385370B1CB6F804008DA53E /* DismissSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissSegue.m; sourceTree = "<group>"; };
 		0385370D1CB6F81E008DA53E /* DismissSegue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DismissSegue.h; sourceTree = "<group>"; };
+		03E95F261CBEE1C20036C3ED /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		03E95F281CBEE1D60036C3ED /* land.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = land.png; sourceTree = "<group>"; };
+		03E95F2A1CBEE1E00036C3ED /* takeOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = takeOff.png; sourceTree = "<group>"; };
+		03E95F2C1CBEE47B0036C3ED /* backFlip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backFlip.png; sourceTree = "<group>"; };
+		03E95F2E1CBEE5400036C3ED /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +136,17 @@
 		032402F41CA0E120002E4AEE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				03E95F2E1CBEE5400036C3ED /* back.png */,
+				03E95F2C1CBEE47B0036C3ED /* backFlip.png */,
+				03E95F2A1CBEE1E00036C3ED /* takeOff.png */,
+				03E95F281CBEE1D60036C3ED /* land.png */,
+				03E95F261CBEE1C20036C3ED /* camera.png */,
+				030FABB41CBD6033009022E0 /* backwardArrow.png */,
+				030FABB51CBD6033009022E0 /* forwardArrow.png */,
+				030FABB61CBD6033009022E0 /* leftYaw.png */,
+				030FABB71CBD6033009022E0 /* rightYaw.png */,
+				030FABB11CBD5F33009022E0 /* downArrow.png */,
+				030FABAF1CBD5F2D009022E0 /* upArrow.png */,
 				032402F51CA0E120002E4AEE /* main.m */,
 			);
 			name = "Supporting Files";
@@ -178,8 +211,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				0324030D1CA0E214002E4AEE /* LaunchScreen.xib in Resources */,
+				030FABB01CBD5F2D009022E0 /* upArrow.png in Resources */,
+				03E95F2B1CBEE1E00036C3ED /* takeOff.png in Resources */,
 				032403011CA0E120002E4AEE /* Assets.xcassets in Resources */,
+				03E95F291CBEE1D60036C3ED /* land.png in Resources */,
+				03E95F2D1CBEE47B0036C3ED /* backFlip.png in Resources */,
+				030FABB21CBD5F33009022E0 /* downArrow.png in Resources */,
+				030FABBA1CBD6033009022E0 /* forwardArrow.png in Resources */,
 				032403121CA0E3CC002E4AEE /* Launch Screen.storyboard in Resources */,
+				030FABB91CBD6033009022E0 /* backwardArrow.png in Resources */,
+				030FABBC1CBD6033009022E0 /* rightYaw.png in Resources */,
+				03E95F2F1CBEE5400036C3ED /* back.png in Resources */,
+				03E95F271CBEE1C20036C3ED /* camera.png in Resources */,
+				030FABBB1CBD6033009022E0 /* leftYaw.png in Resources */,
 				032402FF1CA0E120002E4AEE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

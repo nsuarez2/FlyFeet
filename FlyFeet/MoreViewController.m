@@ -31,7 +31,7 @@
     _moreController->miniDrone->sendAnimationsFlip(_moreController->miniDrone, (eARCOMMANDS_MINIDRONE_ANIMATIONS_FLIP_DIRECTION)1);
 }
 
-- (IBAction)spin:(id)sender
+- (IBAction)takePic:(id)sender
 {
     _moreController->miniDrone->sendMediaRecordPicture(_moreController->miniDrone, 0);
 }
