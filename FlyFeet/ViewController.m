@@ -28,20 +28,18 @@
 
 - (void) viewDidAppear:(BOOL)animated
 {
-    NSLog(@"viewDidAppear ... ");
+    NSLog(@"Main view appeared");
     [super viewDidAppear:animated];
     
     [self registerApplicationNotifications];
     // start the discovery
     
-    NSLog(@"ABOUT TO START DISCOVERY... ");
+    NSLog(@"Start discovery ");
     [[ARDiscovery sharedInstance] start];
-    NSLog(@"DONE WITH DISCOVERY... ");
 }
 
 - (void) viewDidDisappear:(BOOL)animated
 {
-    NSLog(@"viewDidDisappear ... ");
     [super viewDidDisappear:animated];
     
     [self unregisterApplicationNotifications];
@@ -124,7 +122,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    cell.textLabel.text = [(CellData *)[_tableData objectAtIndex:indexPath.row] name];
+    //cell.textLabel.text = [(CellData *)[_tableData objectAtIndex:indexPath.row] name];
+    cell.textLabel.text = @"Tommy's drone";
+    cell.textLabel.font = [UIFont systemFontOfSize:25.0];
     return cell;
 }
 

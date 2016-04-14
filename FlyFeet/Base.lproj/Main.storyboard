@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -34,18 +35,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select your drone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owH-rI-Zfi">
-                                <rect key="frame" x="200" y="69" width="200" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="ZXe-tC-FJv"/>
-                                    <constraint firstAttribute="height" constant="30" id="qty-hV-d4p"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mPd-Gx-pY3">
-                                <rect key="frame" x="0.0" y="114" width="600" height="481"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mPd-Gx-pY3">
+                                <rect key="frame" x="0.0" y="130" width="600" height="488"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <sections/>
                                 <connections>
@@ -53,6 +44,16 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="GFQ-Ke-HMg"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please select your drone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owH-rI-Zfi">
+                                <rect key="frame" x="50" y="72" width="500" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="500" id="ZXe-tC-FJv"/>
+                                    <constraint firstAttribute="height" constant="50" id="qty-hV-d4p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -61,7 +62,8 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mPd-Gx-pY3" secondAttribute="bottom" constant="5" id="BYz-Wz-y0y"/>
                             <constraint firstAttribute="width" secondItem="mPd-Gx-pY3" secondAttribute="width" id="KLV-WG-369"/>
                             <constraint firstAttribute="centerX" secondItem="mPd-Gx-pY3" secondAttribute="centerX" id="QiX-ii-qjB"/>
-                            <constraint firstItem="mPd-Gx-pY3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="jLK-q1-qL0"/>
+                            <constraint firstItem="mPd-Gx-pY3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="130" id="XDh-Pf-9fO"/>
+                            <constraint firstItem="owH-rI-Zfi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="150" id="bPB-gz-mYL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jHq-eX-Z9B"/>
@@ -177,20 +179,6 @@
                                 <color key="textColor" red="0.2470588235" green="0.2470588235" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q36-ZR-DRQ">
-                                <rect key="frame" x="1023" y="1506" width="150" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="eey-tV-VeD"/>
-                                    <constraint firstAttribute="width" constant="100" id="ure-FZ-xkN"/>
-                                </constraints>
-                                <state key="normal" title="Emergency">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="emergencyClick:" destination="h7l-W5-mPq" eventType="touchUpInside" id="XPs-c2-abY"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="downArrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fjx-pC-D5M">
                                 <rect key="frame" x="68" y="323" width="73" height="123"/>
                             </imageView>
@@ -215,15 +203,23 @@
                                 <color key="textColor" red="0.2470588235" green="0.2470588235" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q36-ZR-DRQ">
+                                <rect key="frame" x="20" y="120" width="150" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Emergency">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="emergencyClick:" destination="h7l-W5-mPq" eventType="touchUpInside" id="XPs-c2-abY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xX9-x8-Ti2" firstAttribute="leading" secondItem="f1G-oB-rrQ" secondAttribute="leadingMargin" constant="80" id="5Hv-Dm-vGA"/>
-                            <constraint firstAttribute="centerX" secondItem="q36-ZR-DRQ" secondAttribute="centerX" id="8Sx-FP-ze3"/>
                             <constraint firstItem="UFP-N1-htC" firstAttribute="top" secondItem="nbi-7z-JqM" secondAttribute="bottom" constant="5" id="R34-rG-PBl"/>
                             <constraint firstItem="UFP-N1-htC" firstAttribute="leading" secondItem="f1G-oB-rrQ" secondAttribute="leadingMargin" constant="5" id="Y5i-Un-QXQ"/>
                             <constraint firstItem="xX9-x8-Ti2" firstAttribute="top" secondItem="nbi-7z-JqM" secondAttribute="bottom" constant="5" id="hkJ-or-GvU"/>
-                            <constraint firstItem="q36-ZR-DRQ" firstAttribute="top" secondItem="nbi-7z-JqM" secondAttribute="bottom" constant="5" id="m4O-Fh-SHX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Qnr-jj-IJc"/>
@@ -300,6 +296,7 @@
                                 <color key="backgroundColor" red="0.25098039220000001" green="0.28627450980000002" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="flip:" destination="A7n-NX-kTH" eventType="touchUpInside" id="Cqh-oT-7p3"/>
+                                    <segue destination="h7l-W5-mPq" kind="custom" customClass="DismissSegue" id="xzL-fY-jAK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiW-yQ-zuY" userLabel="Camera Button">
@@ -310,6 +307,7 @@
                                 </state>
                                 <connections>
                                     <action selector="takePic:" destination="A7n-NX-kTH" eventType="touchUpInside" id="nnt-hB-Ld8"/>
+                                    <segue destination="h7l-W5-mPq" kind="custom" customClass="DismissSegue" id="rMr-3H-Pdy"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backFlip.png" translatesAutoresizingMaskIntoConstraints="NO" id="JQR-gI-jZw">
@@ -362,6 +360,6 @@
         <image name="upArrow.png" width="72" height="123"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5z4-mx-fBB"/>
+        <segue reference="qJt-Ef-TaL"/>
     </inferredMetricsTieBreakers>
 </document>

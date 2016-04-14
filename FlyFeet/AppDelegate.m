@@ -21,7 +21,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    NSLog(@"HOME BUTTON LANDED");
+    NSLog(@"Landed because app entered background");
     
     _delegateController->miniDrone->sendPilotingLanding(_delegateController->miniDrone);
     

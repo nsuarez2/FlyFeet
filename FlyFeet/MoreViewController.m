@@ -10,7 +10,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"MORE VIEW CONTROLLER LOADED");
+    NSLog(@"More view controller loaded");
     
 }
 

@@ -21,7 +21,7 @@ void onCommandReceived (eARCONTROLLER_DICTIONARY_KEY commandKey, ARCONTROLLER_DI
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"viewDidLoad ...");
+    NSLog(@"Piloting view loaded");
     
     [_batteryLabel setText:@"waiting"];
     
@@ -54,7 +54,7 @@ void onCommandReceived (eARCONTROLLER_DICTIONARY_KEY commandKey, ARCONTROLLER_DI
     
     eARDISCOVERY_ERROR errorDiscovery = ARDISCOVERY_OK;
     
-    NSLog(@"- init discovey device  ... ");
+    NSLog(@"Init discovey device");
     
     device = ARDISCOVERY_Device_New (&errorDiscovery);
     if ((errorDiscovery != ARDISCOVERY_OK) || (device == NULL))
@@ -90,7 +90,7 @@ void onCommandReceived (eARCONTROLLER_DICTIONARY_KEY commandKey, ARCONTROLLER_DI
         eARCONTROLLER_ERROR error = ARCONTROLLER_OK;
         
         // create the device controller
-        NSLog(@"- ARCONTROLLER_Device_New ... ");
+        NSLog(@"-ARCONTROLLER_Device_New");
         _deviceController = ARCONTROLLER_Device_New (discoveryDevice, &error);
         
         AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -99,42 +99,42 @@ void onCommandReceived (eARCONTROLLER_DICTIONARY_KEY commandKey, ARCONTROLLER_DI
         
         if ((error != ARCONTROLLER_OK) || (_deviceController == NULL))
         {
-            NSLog(@"- error :%s", ARCONTROLLER_Error_ToString(error));
+            NSLog(@"Error :%s", ARCONTROLLER_Error_ToString(error));
         }
         
         // add the state change callback to be informed when the device controller starts, stops...
         if (error == ARCONTROLLER_OK)
         {
-            NSLog(@"- ARCONTROLLER_Device_AddStateChangedCallback ... ");
+            NSLog(@"ARCONTROLLER_Device_AddStateChangedCallback");
             error = ARCONTROLLER_Device_AddStateChangedCallback(_deviceController, stateChanged, (__bridge void *)(self));
             
             if (error != ARCONTROLLER_OK)
             {
-                NSLog(@"- error :%s", ARCONTROLLER_Error_ToString(error));
+                NSLog(@"Error :%s", ARCONTROLLER_Error_ToString(error));
             }
         }
         
         // add the command received callback to be informed when a command has been received from the device
         if (error == ARCONTROLLER_OK)
         {
-            NSLog(@"- ARCONTROLLER_Device_AddCommandRecievedCallback ... ");
+            NSLog(@"ARCONTROLLER_Device_AddCommandRecievedCallback");
             error = ARCONTROLLER_Device_AddCommandReceivedCallback(_deviceController, onCommandReceived, (__bridge void *)(self));
             
             if (error != ARCONTROLLER_OK)
             {
-                NSLog(@"- error :%s", ARCONTROLLER_Error_ToString(error));
+                NSLog(@"Error :%s", ARCONTROLLER_Error_ToString(error));
             }
         }
         
         // start the device controller (the callback stateChanged should be called soon)
         if (error == ARCONTROLLER_OK)
         {
-            NSLog(@"- ARCONTROLLER_Device_Start ... ");
+            NSLog(@"ARCONTROLLER_Device_Start");
             error = ARCONTROLLER_Device_Start (_deviceController);
             
             if (error != ARCONTROLLER_OK)
             {
-                NSLog(@"- error :%s", ARCONTROLLER_Error_ToString(error));
+                NSLog(@"Error :%s", ARCONTROLLER_Error_ToString(error));
             }
         }
         
@@ -175,12 +175,12 @@ void onCommandReceived (eARCONTROLLER_DICTIONARY_KEY commandKey, ARCONTROLLER_DI
             
             if (error != ARCONTROLLER_OK)
             {
-                NSLog(@"- error :%s", ARCONTROLLER_Error_ToString(error));
+                NSLog(@"Error :%s", ARCONTROLLER_Error_ToString(error));
             }
             else
             {
                 // wait for the state to change to stopped
-                NSLog(@"- wait new state ... ");
+                NSLog(@"Wait new state ... ");
                 dispatch_semaphore_wait(_stateSem, DISPATCH_TIME_FOREVER);
             }
         }
@@ -318,15 +318,11 @@ void onCommandReceived (eARCONTROLLER_DICTIONARY_KEY commandKey, ARCONTROLLER_DI
 - (IBAction)yawLeftTouchUp:(id)sender
 {
     _deviceController->miniDrone->setPilotingPCMDYaw(_deviceController->miniDrone, 0);
-    _deviceController->miniDrone->sendPilotingFlatTrim(_deviceController->miniDrone);
-    
 }
 
 - (IBAction)yawRightTouchUp:(id)sender
 {
     _deviceController->miniDrone->setPilotingPCMDYaw(_deviceController->miniDrone, 0);
-    _deviceController->miniDrone->sendPilotingFlatTrim(_deviceController->miniDrone);
-
 }
 
 //events for yaw:
